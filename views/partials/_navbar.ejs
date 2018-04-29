@@ -1,0 +1,36 @@
+<nav class="#ee6e73">
+    <div class="nav-wrapper">
+        <div class="col s12">
+            <a href="/stories" class="brand-logo center">Capture Thoughts</a>
+            <a href="#" data-activates="main-menu" class="button-collapse show-on-large">
+                <i class="fa fa-bars fa-2x"></i>
+            </a>
+            <!--right nav-->
+            <ul class="right hide-on-small-only">
+                <% if(user){ %>
+                    <li><a href="/dashboard" class="waves-effect">Welcome <%= user.firstName %></a></li>
+                    <li><a href="/auth/logout" class="waves-effect"><i class="fa fa-sign-out"></i> Logout</a></li>
+                <% }else{ %>
+                    <li><a href="/stories" class="waves-effect"><i class="fa fa-book"></i> Public Stories</a></li>
+                <% } %>
+            </ul>
+            <!--side menu-->
+            <ul class="side-nav" id="main-menu">
+                    <% if(user){ %>
+
+                    <% }else{ %>
+                        <li>
+                            <a href="/auth/google" class=" btn red darken-1">Login with google</a>
+                        </li>
+                    <% } %>
+                    <li><a href="/stories" class="waves-effect waves-red"><i class="fa fa-book"></i> Public Stories</a></li>
+                    <li class="divider"></li>
+                    <% if(user){ %>
+                    <li><a href="/dashboard" class="waves-effect waves-red"><i class="fa fa-cog"></i> Dashboard</a></li>
+                    <li><a href="/stories/my" class="waves-effect waves-red"><i class="fa fa-user"></i> My Stories</a></li>
+                    <li><a href="/auth/logout" class="waves-effect waves-red"><i class="fa fa-sign-out"></i> Logout</a></li>
+                    <% } %>      
+            </ul>
+        </div>
+    </div>
+</nav>
