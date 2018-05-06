@@ -1,9 +1,120 @@
 <% include ../layouts/header %>
-<h3>Welcome</h3>
-<% if(user){ %>
+<div class="slider">
+    <ul class="slides">
+        <li>
+            <img src="/img/slide-1.jpg"> <!-- slider image -->
+            <div class="caption center-align">
+            <h2>Capture Your Thoughts</h2>
+            <h5 class="light grey-text text-lighten-3">Create Your Public Or Private Diary And Share Your Thoughts With World</h5>
+            <% if(user){ %>
 
-<% }else{ %>
-    <a href="/auth/google" class=" btn red darken-1">Login with google</a>
-<% } %>
+            <% }else{ %>
+                <a href="/auth/google" class="btn btn-large red darken-1 waves-effect waves-light">
+                    <i class="fa fa-google left"></i> Login with google</a>
+            <% } %>
+            </div>
+        </li>
+        <li>
+            <img src="/img/slide-2.jpg"> <!-- slider image -->
+            <div class="caption left-align">
+            <h2>Stories From Your Diary!</h2>
+            <h5 class="light grey-text text-lighten-3">Read Stories of People, Around The World</h5>
+            <a href="/stories" class="btn waves-effect waves-light btn-large">Public Stories</a>
+            </div>
+        </li>
+        <li>
+            <img src="/img/slide-3.jpg"> <!-- slider image -->
+            <div class="caption right-align">
+            <h2>Keep Writing</h2>
+            <h5 class="light grey-text text-lighten-3">Let's Create One</h5>
+            <a href="/about" class="btn waves-effect waves-light btn-large">About Us</a>
+            </div>
+        </li>   
+    </ul>
+</div>
 
+<main>
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <div class="section center">
+                <h1>Welcome</h1>
+                <div class="well-divider"></div>
+                <div class="well-divider"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image">
+              <img src="/img/public-diary.jpg">
+              <span class="card-title">Public Diary</span>
+            </div>
+            <div class="card-content">
+              <p>Here we provide a best platform for you, You can Share your personal experiences, Thoughts
+                  or views with world from your personal diary.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6">
+            <div class="card">
+              <div class="card-image">
+                <img src="/img/private-diary.jpg">
+                <span class="card-title">Private Diary</span>
+              </div>
+              <div class="card-content">
+                <p>Here we provide a best platform for you, You can create private or unpublished stories
+                    and save your stories in your personal diary.
+                </p>
+              </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<section id="quote">
+        <div class="container">
+          <span class="quote">
+            <p>Thoughts</p>
+          </span>
+          <span class="quote">
+            <p>Views</p>
+          </span>
+          <span class="quote">
+            <p>Stories</p>
+          </span>
+        </div>
+</section>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <div class="card small">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="img/start-diary.jpg">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">How Do You Start A Diary?<i class="fa fa-ellipsis-v right"></i></span>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4"><i class="fa fa-times right"></i>Keep Writing</span>
+                    <p>If you can't think of anything to write, then write about how weird it is to be writing about yourself. Write about why you can't think of anything. Write about why you want to keep a diary.</p>
+                    <p>Try setting a time limit for yourself. Set an alarm for ten minutes, and then start writing.</p>
+                    <p>Write about thoughts and feelings, not just events.</p>
+                    <p>Use your diary for creative writing.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</main>
 <% include ../layouts/footer %>

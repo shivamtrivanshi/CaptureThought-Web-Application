@@ -1,0 +1,59 @@
+<% include ../layouts/header %>
+
+<main>
+    <div class="container">
+
+
+<% if(stories > []){ %>
+    <div class="card-panel" id="card-color">
+        <div class="row valign-wrapper" id="dash-row">
+          <div class="col s12">
+              <h4 class="center-align">Stories From The Diary Of "<%= stories[0].user.firstName %>"</h4>
+          </div>
+        </div>
+    </div>
+    
+<% }else{ %>
+    <div class="row center">
+        <div class="col s12 m12">
+          <div class="card  grey">
+            <div class="card-content white-text">
+                <h4>No Stories From This User</h4>
+            </div>
+          </div>
+        </div>
+    </div>
+<% } %>
+
+
+<div class="row" id="stories-row">
+    <% stories.forEach(function(story){ %>
+        <div class="col s12">
+            <div class="card hoverable">
+                <% if(user && story.user.id === user.id){ %>
+                    <div class="card-image">
+                        <a href="/stories/edit/<%= story.id %>" class="btn-floating halfway-fab waves-effect waves-light">
+                            <i class="fa fa-pencil"></i>
+                        </a>
+                    </div>
+                <% } %>
+                <div class="card-content center-align">
+                    <h4 class="truncate dash-status"><%= story.title %></h4>
+                    <p class="story-text"><%- story.body.substring(0, 150) %>...</p>
+                    <br>
+                    <div class="chip">
+                        <img src="<%= story.user.image %>" alt="Contact Person">
+                        <a href="/stories/user/<%= story.user.id %>"><%= story.user.firstName %> <%= story.user.lastName %></a>
+                    </div>
+                </div>
+                <div class="card-action center-align">
+                    <a href="/stories/show/<%= story.id %>" class="btn waves-effect waves-light">Show More</a>
+                </div>
+            </div>
+        </div>
+    <% }); %>
+</div>
+
+    </div>
+</main>
+<% include ../layouts/footer %>

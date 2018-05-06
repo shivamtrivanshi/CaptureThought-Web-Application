@@ -1,14 +1,55 @@
-    <!--jquery cdn-->
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $(".button-collapse").sideNav();
-        });
-    </script>
-</body>
+
+        <% include ../partials/_footer %>
+        <!--jquery cdn-->
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script src="https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
+        <script>
+            $(document).ready(function(){
+
+                //navBar
+                $(".button-collapse").sideNav();
+
+                //slider
+                $('.slider').slider({
+                    indicators: false,
+                    height: 500
+                });
+
+                //alert timeout
+                $("select").material_select();
+                setTimeout(function() {
+                    $('#message').fadeOut('fast');
+                }, 3500);
+
+                //Quotes.........
+                var allQuotes = $(".quote");
+                var currentQuote = 0;
+
+                function changeQuote(){
+                    $(allQuotes[currentQuote]).fadeOut(200, function(){
+                        if(currentQuote == allQuotes.length - 1){
+                            currentQuote = 0;
+                        }else{
+                            currentQuote++;
+                        }
+                        $(allQuotes[currentQuote]).fadeIn(200);
+                    });
+                }
+	            var quoteTimer = setInterval(changeQuote, 3000)
+            });
+
+            CKEDITOR.replace("body", {
+                plugins: "wysiwygarea,toolbar,link,basicstyles",
+                enterMode : CKEDITOR.ENTER_BR,
+                shiftEnterMode: CKEDITOR.ENTER_P,
+                removeButtons: "Italic,Subscript,Superscript"
+            });
+            
+        </script>
+    </body>
 </html>

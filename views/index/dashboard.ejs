@@ -1,0 +1,63 @@
+<% include ../layouts/header %>
+<main>
+<div class="container">
+
+
+    <div class="card-panel" id="card-color">
+        <div class="row valign-wrapper" id="dash-row">
+          <div class="col s12 m2 l2 center-align">
+            <img src="<%= user.image %>" alt="img" class="circle responsive-img"> <!-- notice the "circle" class -->
+          </div>
+          <div class="col s12 m10 l10 canter-align">
+                <h4>Welcome To Your Diary, <%= user.firstName %></h4>
+          </div>
+        </div>
+    </div>
+<% if(stories > []){ %>
+    <table class="striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <% stories.forEach(function(story){ %>
+                <tr>
+                    <td><a href="/stories/show/<%= story.id %>"><%= story.title %></a></td>
+                    <td><%= moment(story.date).format('MMMM Do YYYY, h:mm a');%></td>
+                    <td><span class="dash-status"><%= story.status %></span></td>
+                    <td id="btn-align"><a class="btn left-align" href="/stories/edit/<%= story.id %>">
+                        <i class="fa fa-pencil"></i></a>
+
+                        <form action="/stories/<%= story.id %>?_method=DELETE" method="POST" id="delete-form">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn red"><i class="fa fa-remove"></i></button>
+                        </form>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+<% } else{ %>
+    <div class="row center">
+        <div class="col s12 m12">
+        <div class="card  grey">
+            <div class="card-content white-text">
+                <h3>You Do Not Add Any Story Yet</h3>
+                <h5>Let's Create One</h5>
+            </div>
+            <div class="card-action">
+            <a href="/stories/add" class="btn">Create Story</a>
+            </div>
+        </div>
+        </div>
+    </div>
+<% } %>
+
+
+</div>
+</main>
+<% include ../layouts/footer %>

@@ -1,0 +1,135 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: 'Playfair Display', serif;
+}
+
+
+main {
+    flex: 1 0 auto;
+}
+
+nav .nav-wrapper{
+    padding: 0 1.6%;
+}
+
+#sidenav-overlay{
+    z-index: 996;
+}
+
+#user-info-btn{
+    margin-right: 0;
+}
+
+.story-text{
+    height: 100px;
+}
+
+.dash-status{
+    text-transform: capitalize;
+}
+
+#delete-form{
+    display: inline;
+}
+
+#btn-align{
+    text-align: right !important;
+}
+
+#card-color{
+    background-color: #26a69a;
+    color: #fff; 
+}
+
+#dash-row{
+    margin-bottom: 0;
+}
+
+.page-footer{
+    margin-top: 10vh;
+}
+
+#message .card{
+    border-radius: 15px;
+}
+
+.not-found{
+    color: red;
+    font-size: 100px;
+}
+
+.section h1{
+    color: #ee6e73;
+}
+
+.well-divider {
+    margin: 0 auto;
+    margin-bottom: 2px;
+    height: 1px;
+    overflow: hidden;
+    background-color: #ee6e73;
+}
+
+
+.quote{
+	display: none;
+	border-left: 0;
+	margin-top: 20px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.quote:first-of-type{
+	display: block;
+}
+
+
+
+#quote{
+    background: url("http://www.julianmeijer.com/wp-content/uploads/2015/08/Marcel_Christ_BigBangII1.jpg");
+    background-attachment: fixed;
+    background-origin: initial;
+    background-clip: initial;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    position: relative;
+    text-align: center;
+    padding: 70px 0 70px 0;
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+#about-card{
+    background-color: #272727;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.divider-color{
+    background-color: #ee6e73;
+}
+
+#contact{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.mail{
+    color: #fff;
+    cursor: pointer;
+}
+
+.mail:hover{
+    color: #272727;
+}
+
+
+@media only screen and (min-width: 993px){
+ .container {
+    width: 80%;
+}}
+    

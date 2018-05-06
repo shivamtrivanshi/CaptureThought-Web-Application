@@ -4,10 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CaptureThoughts</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" type="image/png" href="/img/title-logo.png">
+    <title>CaptureThought</title>
+   
 </head>
 <body>
     <% include ../partials/_navbar %>
+    
+    <div class="container">
+        <% if(error && error.length > 0){ %>
+        <div class="row" id="message">
+            <div class="col s12">
+                <div class="card  red lighten-1">
+                    <div class="card-content white-text">
+                        <p><i class="fa fa-bell"></i> <%= error %></p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <% } %>
+
+        <% if(success && success.length > 0){ %>
+        <div class="row" id="message">
+            <div class="col s12">
+                <div class="card light-green lighten-1">
+                    <div class="card-content white-text">
+                        <p><i class="fa fa-bell"></i> <%= success %></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% } %>
+    </div>
+    <% if(user){ %>
+        <% include ../partials/_add-btn %>
+    <% } %>
+
+        
     
