@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://www.capturethought.com/</loc>
+  <lastmod>2018-05-06T15:09:38+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.capturethought.com/stories</loc>
+  <lastmod>2018-05-06T15:09:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.capturethought.com/about</loc>
+  <lastmod>2018-05-06T15:09:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.capturethought.com/stories/user/5aeeece5fc3aac00149da5bc</loc>
+  <lastmod>2018-05-06T15:09:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.capturethought.com/stories/show/5aef000bfc3aac00149da5c5</loc>
+  <lastmod>2018-05-06T15:09:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.capturethought.com/stories/show/5aeef19efc3aac00149da5c3</loc>
+  <lastmod>2018-05-06T15:09:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.capturethought.com/stories/show/5aeeed9afc3aac00149da5bd</loc>
+  <lastmod>2018-05-06T15:09:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
