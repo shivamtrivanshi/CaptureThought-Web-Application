@@ -10,7 +10,7 @@ router.get("/", ensureGuest, function(req, res){
 });
 
 router.get("/dashboard", ensureAuthenticated, function(req, res){
-    Story.find({user: req.user.id}, function(err, stories){
+    Story.find({user: req.user.id}).sort({date: "desc"}).exec(function(err, stories){
         if(err){
             req.flash("error", "Connection error!");
             res.redirect("/");
